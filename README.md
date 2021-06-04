@@ -7,6 +7,10 @@
 | email    | string     | null: false            |
 | password | string     | null: false            |
 
+### association
+has_many spendings
+has_many houseworks
+
 ## spending テーブル
 
 | Column            | Type       | Options                        |
@@ -15,11 +19,16 @@
 | amount            | integer    | null: false                    |
 | user_id           | references | null: false, foreign_key: true |
 
+### association
+belongs_to user
 
-## house_work_point
+## housework
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
 | work_category     | integer    | null: false                    |
 | point             | integer    | null: false                    |
 | user_id           | references | null: false, foreign_key: true |
+
+### association
+belongs_to user
