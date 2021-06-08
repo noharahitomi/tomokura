@@ -1,27 +1,74 @@
-main{
+.main{
+  position: relative;
+}
+
+.title{
+  padding-left: 50px;
+  width: 20%;
+  text-align: left;
+}
+
+
+.back_img{
+  padding: 0 50px;
+  margin-top: 0;
+  list-style: none;
   text-align: center;
+  line-height: 0;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 2;
+  -moz-column-gap: 0px;
+  column-count: 2;
+  column-gap: 0px;
 }
 
-.sentakumono{
-  width: 40%;
+ul.back_img li{
+  margin:0;
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
 }
 
-.flowers{
-  width: 40%;
+ul.back_img li img{
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-b;
+  border:solid #fff 0px;
 }
 
-.calculator{
-  width: 30%;
+.title_section{
 }
 
-.dish{
+.title_section{
+  background-color: rgba(255,255,255,0.7);
+  padding: 200px, auto;
+  font-size: 20px;
+  color: #2b2a2a;
+  position: absolute;
+  top: 250px;
+  left: 25%;
+  margin: 0;
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
   width: 50%;
+  height: 30%;
+  font-family: serif;
 }
 
-.market{
-  width: 30%;
+.sign_up{
+  list-style: none;
+  position: absolute;
+  top: 250px;
+  left: 25%;
+  display:flex;
+
 }
 
-.recipi{
-  width: 50%;
+a{
+  text-decoration: none;
+  color: #2b2a2a;
+  margin-right: 55px; 
 }

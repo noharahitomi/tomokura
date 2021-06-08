@@ -7,15 +7,30 @@
 </head>
 <body>
   <header>
+    <div class="title_img">
+      <%= image_tag 'TOMOKURA.png', class:'title' %>
+    </div>
   </header>
   <main>
-    <div class="back_img">
-      <%= image_tag 'calculator.jpg', class:'calculator' %>
-      <%= image_tag 'dish.jpg', class:'dish' %>
-      <%= image_tag 'flowers.jpg', class:'flowers' %>
-      <%= image_tag 'sentakumono.jpg', class:'sentakumono' %>
-      <%= image_tag 'recipi.jpg', class:'recipi' %>
-      <%= image_tag 'market.jpg', class:'market' %>
+    <div class="main">
+      <ul class="back_img">
+        <li><%= image_tag 'dish.jpg', class:'dish' %></li>
+        <li><%= image_tag 'flowers.jpg', class:'flowers' %></li>
+        <li><%= image_tag 'sentakumono.jpg', class:'sentakumono' %></li>
+        <li><%= image_tag 'recipi.jpg', class:'recipi' %></li>
+      </ul>
+      <div class="title_section">
+        <section>
+          <p>大切な人と、お金の管理で揉めないように、
+          <br>最初に決めよう。暮らしの決まりごと。</p>
+        </section>
+        <div>
+        <ul class="sign_up">
+          <li><%= link_to '新規登録', '#', class: "sign-up" %></li>
+          <li><%= link_to 'ログイン', '#', class: "login" %></li>
+        </ul>
+        </div>
+      </div>
     </div>
   </main>
 
