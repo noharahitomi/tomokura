@@ -25,7 +25,6 @@
 
 ul.back_img li{
   margin:0;
-  /* Just in case there are inline attributes */
   width: 100% !important;
   height: auto !important;
 }
@@ -39,13 +38,10 @@ ul.back_img li img{
 }
 
 .title_section{
-}
-
-.title_section{
   background-color: rgba(255,255,255,0.7);
   padding: 200px, auto;
   font-size: 20px;
-  color: #2b2a2a;
+  color: #494949;
   position: absolute;
   top: 250px;
   left: 25%;
@@ -58,17 +54,25 @@ ul.back_img li img{
   font-family: serif;
 }
 
-.sign_up{
+ul.sign_up{
   list-style: none;
   position: absolute;
   top: 250px;
-  left: 25%;
-  display:flex;
+  left: 15%;
+  display: flex;
+}
 
+.sign_up li{
+  text-decoration: none;
+  background-color: #6ce5e8;
+  margin: auto;
+  display: flex;
+  margin-right: 80px;
+  border-radius: 10px;
 }
 
 a{
   text-decoration: none;
-  color: #2b2a2a;
-  margin-right: 55px; 
+  color: #494949;
+  padding: 10px 20px;
 }
