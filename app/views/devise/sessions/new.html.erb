@@ -1,26 +1,57 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=devise-width, initial-scale=1.0" />
+  <title>tomokura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div class="title_img">
+        <%= link_to root_path, class:"title_imag" do %>
+          <%= image_tag 'TOMOKURA.png', class:'title' %>
+        <% end %>
+      </div>
+      <ul class="header_sign_up">
+        <li><%= link_to '新規登録', new_user_registration_path, class:"sign_up" %></li>
+        <li><%= link_to 'ログイン', new_user_session_path, class:"log_in" %></li>
+      </ul>
     </div>
-  <% end %>
+  </header>
+  <main>
+    <div class="main">
+      <ul class="back_img">
+        <li><%= image_tag 'dish.jpg', class:'dish' %></li>
+        <li><%= image_tag 'flowers.jpg', class:'flowers' %></li>
+        <li><%= image_tag 'sentakumono.jpg', class:'sentakumono' %></li>
+        <li><%= image_tag 'recipi.jpg', class:'recipi' %></li>
+      </ul>
+      <div class="session">
+        <h2>ログイン</h2>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>         
+          <div class="field">
+            <label class="form-text">メール</label><br>
+            <%= f.email_field :email, class:"input-email", autofocus: true, autocomplete: "email" %>
+          </div>
 
-<%= render "devise/shared/links" %>
+          <div class="field">
+            <label class="form-text">パスワード</label><br>
+            <%= f.password_field :password, class:"input-password", autocomplete: "current-password" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "ログイン",class:"btn_log_in" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+  </footer>
+
+</body>
+</html>
