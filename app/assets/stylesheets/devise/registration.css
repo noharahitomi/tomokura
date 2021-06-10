@@ -1,0 +1,139 @@
+@media (max-width: 1000px) {
+  h2 {
+    font-size: 15px;
+  }
+  .field {
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 12px;
+    text-align: center;
+  }
+  .form-text{
+    font-size: 13px;
+  }
+}
+
+.main{
+  position: relative;
+}
+
+.header{
+  width: 100vw;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 100px;
+}
+
+.header_sign_up{
+  width: 100vw;
+  height: 5vh;
+  word-break:keep-all;
+}
+
+.header_sign_up li{
+  margin-right: 20px;
+  list-style: none;
+  font-family: serif;
+}
+
+.title{
+  margin-left: 50px;
+  height: 13vh;
+  text-align: left;
+}
+
+
+.back_img{
+  padding: 0 50px;
+  margin-top: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 0;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 2;
+  -moz-column-gap: 0px;
+  column-count: 2;
+  column-gap: 0px;
+}
+
+ul.back_img li{
+  margin:0;
+  width: 100% !important;
+  height: auto !important;
+}
+
+ul.back_img li img{
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-b;
+  border:solid #fff 0px;
+  width: 100wh;
+}
+
+.registration{
+  background-color: rgba(255,255,255,0.7);
+  font-size: 20px;
+  color: #494949;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding: 30px 50px 100px 50px;
+  width: 50%;
+  height: 40vh;
+  font-family: serif;
+  word-break: keep-all;
+}
+
+h2 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.field{
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-text{
+  font-size: 15px;
+}
+
+.input-name{
+  width: 200px;
+  height: 20px;
+  font-family: serif;
+}
+
+.input-email{
+  width: 200px;
+  height: 20px;
+}
+
+.input-password{
+  width: 200px;
+  height: 20px;
+  font-family: serif;
+}
+
+.actions{
+  text-align: center;
+}
+
+.btn_sign_up{
+  background-color: #6ce5e8;
+  border: none;
+  border-radius: 5px;
+  margin-top: 30px;
+  padding: 5px 15px;
+}
