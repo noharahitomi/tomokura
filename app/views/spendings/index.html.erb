@@ -1,1 +1,50 @@
-<h1>トップページ</h1>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=devise-width, initial-scale=1.0" />
+  <title>tomokura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div class="title_img">
+        <%= link_to root_path, class:"title_imag" do %>
+          <%= image_tag 'TOMOKURA.png', class:'title' %>
+        <% end %>
+      </div>
+      <ul class="header_sign_up">
+        <li><%= link_to '新規登録', '#', class:"sign_up" %></li>
+        <li><%= link_to 'ログイン', '#', class:"log_in" %></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="main">
+      <ul class="back_img">
+        <li><%= image_tag 'dish.jpg', class:'dish' %></li>
+        <li><%= image_tag 'flowers.jpg', class:'flowers' %></li>
+        <li><%= image_tag 'sentakumono.jpg', class:'sentakumono' %></li>
+        <li><%= image_tag 'recipi.jpg', class:'recipi' %></li>
+      </ul>
+      <div class="title_section">
+        <section>
+          <p>大切な人と、お金の管理で揉めないように、
+          <br>最初に決めよう。暮らしの決まりごと。</p>
+          <div>
+            <ul class="sign_up">
+              <li><%= link_to '新規登録', '#', class: "sign-up" %></li>
+              <li><%= link_to 'ログイン', '#', class: "login" %></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+  </footer>
+
+</body>
+</html>
