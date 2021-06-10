@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=devise-width, initial-scale=1.0" />
+  <title>tomokura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div class="title_img">
+        <%= link_to root_path, class:"title_imag" do %>
+          <%= image_tag 'TOMOKURA.png', class:'title' %>
+        <% end %>
+      </div>
+      <ul class="header_sign_up">
+        <li><%= link_to '新規登録', new_user_registration_path, class:"sign_up" %></li>
+        <li><%= link_to 'ログイン', new_user_session_path, class:"log_in" %></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="main">
+      <ul class="back_img">
+        <li><%= image_tag 'dish.jpg', class:'dish' %></li>
+        <li><%= image_tag 'flowers.jpg', class:'flowers' %></li>
+        <li><%= image_tag 'sentakumono.jpg', class:'sentakumono' %></li>
+        <li><%= image_tag 'recipi.jpg', class:'recipi' %></li>
+      </ul>
+      <div class="registration">
+        <h2>新規登録</h2>
+
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+          
+          <div class="field">
+            <label class="form-text">名前</label><br>
+            <div class="form">
+              <%= f.text_field :nickname, class:"input-name", autofocus: true, autocomplete: "nickname", placeholder:"例) ふうこ" %>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="form-text">メール</label><br>
+            <div class="form">
+              <%= f.email_field :email, class:"input-email", autofocus: true, autocomplete: "email" %>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="form-text">パスワード（6文字以内）</label><br>
+            <div class="form">  
+              <%= f.password_field :password, class:"input-password", autocomplete: "new-password", placeholder:"6文字以上の半角英数字" %>
+            </div>
+          </div>
+
+           <div class="field">
+             <label class="form-text">パスワード（確認）</label><br>
+             <div class="form"> 
+               <%= f.password_field :password_confirmation, class:"input-password", autocomplete: "new-password", placeholder: "再入力" %>
+             </div>
+           </div>
+
+           <div class="actions">
+             <%= f.submit "登録する", class:"btn_sign_up" %>
+           </div>
+         <% end %>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+  </footer>
+
+</body>
+</html>

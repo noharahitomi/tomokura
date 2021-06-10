@@ -15,13 +15,8 @@
         <% end %>
       </div>
       <ul class="header_sign_up">
-        <% if user_signed_in? %>
-          <li><%= link_to '太郎さん', root_path, class: "user_nickname" %>
-          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-        <% else %>
-          <li><%= link_to '新規登録', new_user_registration_path, class:"sign_up" %></li>
-          <li><%= link_to 'ログイン', new_user_session_path, class:"log_in" %></li>
-        <% end %>
+        <li><%= link_to '新規登録', new_user_registration_path, class:"sign_up" %></li>
+        <li><%= link_to 'ログイン', new_user_session_path, class:"log_in" %></li>
       </ul>
     </div>
   </header>
@@ -33,17 +28,24 @@
         <li><%= image_tag 'sentakumono.jpg', class:'sentakumono' %></li>
         <li><%= image_tag 'recipi.jpg', class:'recipi' %></li>
       </ul>
-      <div class="title_section">
-        <section>
-          <p>大切な人と、お金の管理で揉めないように、
-          <br>最初に決めよう。暮らしの決まりごと。</p>
-          <div>
-            <ul class="sign_up">
-              <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-              <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-            </ul>
+      <div class="session">
+        <h2>ログイン</h2>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>         
+          <div class="field">
+            <label class="form-text">メール</label><br>
+            <%= f.email_field :email, class:"input-email", autofocus: true, autocomplete: "email" %>
           </div>
-        </section>
+
+          <div class="field">
+            <label class="form-text">パスワード</label><br>
+            <%= f.password_field :password, class:"input-password", autocomplete: "current-password" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "ログイン",class:"btn_log_in" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </main>
