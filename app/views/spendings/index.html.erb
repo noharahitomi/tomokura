@@ -8,45 +8,34 @@
 </head>
 <body>
   <header>
-    <div class="header">
-      <div class="title_img">
-        <%= link_to root_path, class:"title_imag" do %>
-          <%= image_tag 'TOMOKURA.png', class:'title' %>
-        <% end %>
-      </div>
-      <ul class="header_sign_up">
-        <% if user_signed_in? %>
-          <li><%= link_to "#{current_user.nickname} さん", root_path, class: "user_nickname" %>
-          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-        <% else %>
-          <li><%= link_to '新規登録', new_user_registration_path, class:"sign_up" %></li>
-          <li><%= link_to 'ログイン', new_user_session_path, class:"log_in" %></li>
-        <% end %>
-      </ul>
-    </div>
+    <%= render partial:'layouts/header' %>
   </header>
   <main>
-    <div class="main">
-      <ul class="back_img">
-        <li><%= image_tag 'dish.jpg', class:'dish' %></li>
-        <li><%= image_tag 'flowers.jpg', class:'flowers' %></li>
-        <li><%= image_tag 'sentakumono.jpg', class:'sentakumono' %></li>
-        <li><%= image_tag 'recipi.jpg', class:'recipi' %></li>
-      </ul>
-      <div class="title_section">
-        <section>
-          <p>大切な人と、お金の管理で揉めないように、
-          <br>最初に決めよう。暮らしの決まりごと。</p>
-          <div>
-            <ul class="sign_up">
-              <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-              <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-            </ul>
-          </div>
-        </section>
+    <% if user_signed_in? %>
+      <%= render 'mypage' %>
+    <% else %>
+      <div class="main">
+        <ul class="back_img">
+          <li><%= image_tag 'dish.jpg', class:'dish' %></li>
+          <li><%= image_tag 'flowers.jpg', class:'flowers' %></li>
+          <li><%= image_tag 'sentakumono.jpg', class:'sentakumono' %></li>
+          <li><%= image_tag 'recipi.jpg', class:'recipi' %></li>
+        </ul>
+        <div class="title_section">
+          <section>
+            <p>大切な人と、お金の管理で揉めないように、
+            <br>最初に決めよう。暮らしの決まりごと。</p>
+            <div>
+              <ul class="sign_up">
+                <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+                <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+              </ul>
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
-  </main>
+    <% end %>
+    </main>
 
   <footer>
   </footer>

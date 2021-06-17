@@ -8,17 +8,7 @@
 </head>
 <body>
   <header>
-    <div class="header">
-      <div class="title_img">
-        <%= link_to root_path, class:"title_imag" do %>
-          <%= image_tag 'TOMOKURA.png', class:'title' %>
-        <% end %>
-      </div>
-      <ul class="header_sign_up">
-        <li><%= link_to '新規登録', new_user_registration_path, class:"sign_up" %></li>
-        <li><%= link_to 'ログイン', new_user_session_path, class:"log_in" %></li>
-      </ul>
-    </div>
+    <%= render partial:'layouts/header' %>
   </header>
   <main>
     <div class="main">

@@ -1,0 +1,18 @@
+ul.btn_new{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.btn_new li {
+  background-color: rgb(255, 94, 0);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  padding: 20px 40px;
+  border-radius: 40px;
+}
+
+.btn_new{
+  margin-top: 50px;
+}

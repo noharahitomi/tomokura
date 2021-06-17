@@ -1,0 +1,82 @@
+.simple-calendar {
+  .day {
+    color: rgb(53, 38, 38);
+    background-color: #fff;
+  }
+
+  .wday-0 {
+    background-color: rgb(255, 201, 188)
+  }
+  .wday-1 {
+
+  }
+  .wday-2 {
+
+  }
+  .wday-3 {
+
+  }
+  .wday-4 {
+
+  }
+  .wday-5 {
+
+  }
+  .wday-6 {
+    background-color: rgb(255, 201, 188)
+  }
+
+  .today {
+
+  }
+  .past {
+   
+  }
+  .future {
+   
+  }
+
+  .start-date {
+
+  }
+
+  .prev-month {
+
+  }
+  .next-month {
+    
+   }
+  .current-month {
+
+  }
+
+  .has-events {
+
+  }
+  
+  table{
+    margin-top: 20px;
+    height: 700px;
+  }
+
+  span{
+    font-size: 20px;
+  }
+  .days{
+    text-align: end;
+  }
+  .week-day{
+    text-align: center;
+  }
+
+  .table{
+    border-collapse: collapse;
+    border: solid 2px rgb(255, 94, 0);
+    background-color: rgb(255, 94, 0);
+  }
+
+  table th, table td {
+    border: dashed 1px rgb(255, 94, 0);
+
+  }
+}
