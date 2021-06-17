@@ -1,12 +1,24 @@
-<div class="calendar">
-  <%= month_calendar do |date| %>
-    <%= date %>
-  <% end %>
-</div>
-<div class="btn_new">
-  <ul class="btn_new">
-    <li class="btn_list"><%= link_to "支出を登録", '#', class: "btn_spendings" %></li>
-    <li class="btn_list"><%= link_to "家事ポイントを登録", "#", class: "btn_point"%></li>
-    <li class="btn_list"><%= link_to "ありがとう", "#", class: "btn_thanks" %></li>
-  </ul>
+<div class="main-page">
+  <div class="total">
+    <p>支出合計　　　　　　　:</p>
+    <p>家事ポイント　　　　　:</p>
+    <p>ありがとうポイント　　:</p>
+  
+  </div>
+
+  <div class="calendar">
+    <%= month_calendar do |date| %>
+      <%= date %>
+    <% end %>
+  </div>
+  <div class="btn_new">
+    <ul class="btn_new">
+      <li class="btn_list"><%= link_to "支出を登録", '#', class: "btn_spendings" %></li>
+      <li class="btn_list"><%= link_to "家事ポイントを登録", "#", class: "btn_point"%></li>
+      <li class="btn_list"><%= link_to "ありがとう", "#", class: "btn_thanks" %></li>
+    </ul>
+  </div>
+
+  <div class="percentage">
+  </div>
 </div>

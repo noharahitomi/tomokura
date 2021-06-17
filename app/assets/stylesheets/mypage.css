@@ -1,8 +1,14 @@
-ul.btn_new{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
+.total{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.main-page{
+  width:90vw;
+  margin-left: auto;
+  margin-right: auto;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
 .btn_new li {
@@ -15,4 +21,12 @@ ul.btn_new{
 
 .btn_new{
   margin-top: 50px;
+
+}
+
+ul.btn_new{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
 }
