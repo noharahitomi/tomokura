@@ -15,30 +15,69 @@
       <%= render 'mypage' %>
     <% else %>
       <div class="main">
-        <ul class="back_img">
-          <li><%= image_tag 'dish.jpg', class:'dish' %></li>
-          <li><%= image_tag 'flowers.jpg', class:'flowers' %></li>
-          <li><%= image_tag 'sentakumono.jpg', class:'sentakumono' %></li>
-          <li><%= image_tag 'recipi.jpg', class:'recipi' %></li>
-        </ul>
-        <div class="title_section">
-          <section>
-            <p>大切な人と、お金の管理で揉めないように、
-            <br>最初に決めよう。暮らしの決まりごと。</p>
-            <div>
-              <ul class="sign_up">
-                <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-                <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-              </ul>
-            </div>
-          </section>
+        <div class="back_img">
+          <%= image_tag 'back.jpg', class:'back-img' %>
         </div>
+        <div class="title_section">
+            <section>
+              <p>人とともに暮らしていくために、
+              <br>しっかり管理して、感謝しよう。</p>
+            </section>
+        </div>
+      </div>
+
+        <!-- こんな方におすすめ！ -->
+        <div>
+          <h2>こんな方におすすめ！</h2>
+          <ul class="target">
+            <li>
+              <%= image_tag 'wallet.png', class:'wallet' %>
+              <span><br>お財布が別々のふたりに。</span>
+            </li>
+            <li>
+              <%= image_tag 'housework.png', class:'house_work' %>
+              <span><br>家事の負担が偏っているふたりに。</span>
+            </li>
+            <li>
+              <%= image_tag 'thankyou.png', class:'thank_you' %>
+              <span><br>ありがとうが足りないふたりに。</span>
+            </li>
+          </ul>
+        </div>
+        <!-- こんな機能がある！ -->
+        <div >
+          <h2>使える機能</h2>
+          <ul class="functions">
+            <li class="function">
+              <%= image_tag 'calendar.png', class:'calender_prev' %>
+              <span><br>スケジュール帳のように、
+              <br>日付ごとに管理できます。</span>
+            </li>
+            <li class="function">
+              <%= image_tag 'graph.png', class:'graph' %>
+              <span><br>グラフで支出が見える化できるので、
+              <br>管理しやすいです。</span>
+            </li>
+            <li class="function">
+              <%= image_tag 'thankyou2.png', class:'function_thank_you' %>
+              <span><br>家事を登録。自分の支出をマイナスに。
+              <br>家事に対してありがとうを送ることができます。</span>
+            </li>
+          </ul>
+        
+        </div>
+
       </div>
     <% end %>
     </main>
 
+  <% unless user_signed_in? %>
   <footer>
+    <ul class="footer_user">
+      <li><%= link_to '新規登録', new_user_registration_path, class:'sign_up' %></li>
+      <li><%= link_to 'ログイン', new_user_session_path, class:'log_in' %></li>
+    </ul>
   </footer>
-
+  <% end %>
 </body>
 </html>
