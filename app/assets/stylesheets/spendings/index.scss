@@ -1,24 +1,9 @@
-@media (max-width: 1000px) {
-  p {
-    font-size: 15px;
-  }
-  li {
-    font-size: 14px;
-  }
-}
-@media (max-width: 500px) {
-  p {
-    font-size: 12px;
-    text-align: center;
-  }
-  li {
-    font-size: 13px;
-  }
-}
+
 
 .main{
   margin-left: 20px;
   margin-right: 20px;
+  text-align: center;
   
 }
 
@@ -111,7 +96,6 @@ h2{
   color: #494949;
   border-bottom: dotted 3px #ff5757;
   padding-bottom: 10px;
-
 }
 
 

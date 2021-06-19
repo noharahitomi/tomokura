@@ -71,12 +71,13 @@
     <% end %>
     </main>
 
+  <% unless user_signed_in? %>
   <footer>
     <ul class="footer_user">
       <li><%= link_to '新規登録', new_user_registration_path, class:'sign_up' %></li>
       <li><%= link_to 'ログイン', new_user_session_path, class:'log_in' %></li>
     </ul>
   </footer>
-
+  <% end %>
 </body>
 </html>

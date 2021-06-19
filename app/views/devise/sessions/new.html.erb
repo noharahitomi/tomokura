@@ -12,16 +12,14 @@
   </header>
   <main>
     <div class="main">
-      <ul class="back_img">
-        <li><%= image_tag 'dish.jpg', class:'dish' %></li>
-        <li><%= image_tag 'flowers.jpg', class:'flowers' %></li>
-        <li><%= image_tag 'sentakumono.jpg', class:'sentakumono' %></li>
-        <li><%= image_tag 'recipi.jpg', class:'recipi' %></li>
-      </ul>
       <div class="session">
         <h2>ログイン</h2>
-
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>         
+          <div class='login-flash-message'>
+            <%= flash[:notice] %>
+            <%= flash[:alert] %>
+          </div>
+        <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>      
+          <%= render "devise/shared/error_messages", resource: resource %>
           <div class="field">
             <label class="form-text">メール</label><br>
             <%= f.email_field :email, class:"input-email", autofocus: true, autocomplete: "email" %>
@@ -39,9 +37,5 @@
       </div>
     </div>
   </main>
-
-  <footer>
-  </footer>
-
 </body>
 </html>
