@@ -43,7 +43,7 @@
 .header_sign_up li{
   margin-right: 20px;
   list-style: none;
-  font-family: serif;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
 .title{
@@ -79,7 +79,7 @@ ul.back_img li img{
   -moz-box-sizing: border-box;
   box-sizing: border-b;
   border:solid #fff 0px;
-  width: 100wh;
+  width: 100vw;
 }
 
 .registration{
@@ -94,7 +94,7 @@ ul.back_img li img{
   padding: 100px 50px;
   width: 50vw;
   height: 40vh;
-  font-family: serif;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
   word-break: keep-all;
 }
 
@@ -117,7 +117,7 @@ h2 {
 .input-name{
   width: 200px;
   height: 20px;
-  font-family: serif;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
 .input-email{
@@ -128,7 +128,7 @@ h2 {
 .input-password{
   width: 200px;
   height: 20px;
-  font-family: serif;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
 .actions{
@@ -141,4 +141,5 @@ h2 {
   border-radius: 5px;
   margin-top: 30px;
   padding: 5px 15px;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }

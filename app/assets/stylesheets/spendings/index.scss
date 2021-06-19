@@ -17,7 +17,9 @@
 }
 
 .main{
-  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  
 }
 
 .header{
@@ -37,48 +39,21 @@
 .header_sign_up li{
   margin-right: 20px;
   list-style: none;
-  font-family: serif;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
-.title{
-  margin-left: 50px;
-  height: 13vh;
-  text-align: left;
-}
-
-
-.back_img{
-  padding: 0 50px;
-  margin-top: 0;
-  list-style: none;
+.back-img{
+  width: 90vw;
   text-align: center;
-  line-height: 0;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 0px;
-  -moz-column-count: 2;
-  -moz-column-gap: 0px;
-  column-count: 2;
-  column-gap: 0px;
+  position: relative;
+  text-align: center;
 }
 
-ul.back_img li{
-  margin:0;
-  width: 100% !important;
-  height: auto !important;
-}
 
-ul.back_img li img{
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-b;
-  border:solid #fff 0px;
-  width: 100wh;
-}
 
 .title_section{
   background-color: rgba(255,255,255,0.7);
-  font-size: 20px;
+  font-size: 25px;
   color: #494949;
   position: absolute;
   top: 50%;
@@ -89,10 +64,10 @@ ul.back_img li img{
   margin:0;
   padding: 100px 50px;
   width: 50%;
-  height: 26vh;
-  font-family: serif;
-  display:flex;
-
+  height: 15vh;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -129,3 +104,95 @@ a{
   font-size: 17px;
 }
 
+h2{
+  margin: 70px 400px 0;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  font-size: 24px;
+  color: #494949;
+  border-bottom: dotted 3px #ff5757;
+  padding-bottom: 10px;
+
+}
+
+
+.target{
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.functions{
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+ul{
+  margin-top: 30px;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  color: #494949;
+  font-size: 18px;
+}
+
+img.wallet{
+  width: 280px;
+}
+
+img.house_work{
+  width: 280px;
+}
+
+img.thank_you{
+  width: 280px;
+}
+
+img.calender_prev{
+  height: 300px;
+}
+
+img.graph{
+  height: 300px;
+}
+
+img.function_thank_you{
+  height: 300px;
+}
+
+.functions{
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 120px;
+}
+
+.function{
+  border: solid 3px #ff5757;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left:0;
+  background-color: rgba(255,87,87,0.3);
+  width: 100%;
+  height: 100px;
+}
+
+.footer_user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 20px;
+}
+
+.footer_user li{
+  margin-right: 40px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 5px 20px;
+}
