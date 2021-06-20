@@ -4,11 +4,11 @@ class SpendingsController < ApplicationController
   end
 
   def new
-
+    @spending = Spending.new 
   end
 
   def create
-
+    Spending.create(spending_parameter)
   end
 
 end

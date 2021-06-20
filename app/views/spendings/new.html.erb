@@ -1,0 +1,35 @@
+<header>
+  <%= render partial:'layouts/header' %>
+</header>
+<main>
+  <%= form_with model: @spending, url: new_spendings_path, local: true do |form| %>
+    
+    <div class="form">
+      <%= form.label :account_id %>
+      <%= form.collection_select(:account_id, Account.all, :id, :name, {}, {class:"account-select"}) %>
+    </div>
+
+    <div class="form">
+      <%= form.label :start_time %>
+      <%= form.datetime_select :start_time %>
+
+    <div class="form">
+      <%= form.label :shopping_category_id %>
+      <%= form.collection_select(:shopping_category_id, ShoppingCategory.all, :id, :name, {}, {class:"shopping-category--select"}) %>
+    </div>
+    
+    <div class="form">
+      <%= form.label :amount %>
+      <%= form.text_field :amount %>
+    </div>
+
+    <div class="form">
+      <%= form.label :content %>
+      <%= form.text_field :content %>
+    </div>
+
+    <div class="form-btn">
+      <%= form.submit "登録", class: "btn" %>
+    </div>
+  <% end %>
+</main>
