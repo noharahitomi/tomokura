@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_06_20_144528) do
 
   create_table "spendings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "account_id", null: false
-    t.datetime "start_time", null: false
+    t.date "arrival_date", null: false
     t.integer "shopping_category_id", null: false
     t.integer "amount", null: false
     t.string "content", null: false
