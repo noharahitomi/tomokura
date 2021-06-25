@@ -12,7 +12,7 @@
   </header>
   <main>
     <% if user_signed_in? %>
-      <%= render 'mypage' %>
+      <%= render partial: 'mypage' %>
     <% else %>
       <div class="main">
         <div class="back_img">

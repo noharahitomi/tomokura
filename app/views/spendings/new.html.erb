@@ -1,31 +1,32 @@
 <header>
   <%= render partial:'layouts/header' %>
 </header>
-<main>
+<main class="form-spending">
   <%= form_with model: @spending, url: spendings_path, local: true do |form| %>
     
     <div class="form">
-      <%= form.label "支払ったユーザ" %>
-      <%= form.collection_select(:account_id, Account.all, :id, :name, {}, {class:"account-select"}) %>
+      <span><%= form.label "お支払い" %>
+      <br><%= form.collection_select(:account_id, Account.all, :id, :name, {}, {class:"account-select"}) %></span>
     </div>
 
     <div class="form">
-      <%= form.label "日付" %>
-      <%= form.date_select :arrival_date, class: "date"%>
+      <span><%= form.label "日付" %>
+      <br><%= form.date_select :start_time, {}, class: "date" %></span>
+    </div>
 
     <div class="form">
-      <%= form.label "カテゴリーを選択" %>
-      <%= form.collection_select(:shopping_category_id, ShoppingCategory.all, :id, :name, {}, {class:"shopping-category--select"}) %>
+      <span><%= form.label "カテゴリーを選択" %>
+      <br><%= form.collection_select(:shopping_category_id, ShoppingCategory.all, :id, :name, {}, {class:"shopping-category-select"}) %></span>
     </div>
     
     <div class="form">
-      <%= form.label "￥" %>
-      <%= form.text_field :amount %>
+      <span><%= form.label "金額" %>
+      <br><%= form.text_field :amount, class: "amount" %>円</span>
     </div>
 
     <div class="form">
-      <%= form.label "備考欄" %>
-      <%= form.text_area :content %>
+      <span><%= form.label "備考欄" %>
+      <br><%= form.text_area :content, class: "content" %></span>
     </div>
 
     <div class="form-btn">

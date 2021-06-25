@@ -7,8 +7,16 @@
   </div>
 
   <div class="calendar">
-    <%= month_calendar do |date| %>
+    <%= month_calendar events:@spendings do |date, spendings| %>
       <%= date %>
+
+        <div class="day-spending">
+          <% spendings.each do |spending| %>
+            <div class= "shopping-category">
+              <span><%= spending.shopping_category.name %>：</span><span><%= spending.amount %>円</span>
+            </div>
+          <% end %>
+        </div>  
     <% end %>
   </div>
   <div class="btn_new">

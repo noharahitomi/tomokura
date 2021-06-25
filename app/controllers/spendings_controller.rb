@@ -1,6 +1,6 @@
 class SpendingsController < ApplicationController
   def index
-    
+    @spendings = Spending.all
   end
 
   def new
@@ -24,7 +24,7 @@ class SpendingsController < ApplicationController
   private
 
   def spending_parameter
-    params.require(:spending).permit(:account_id, :arrival_date, :shopping_category_id, :amount, :content).merge(user_id: current_user.id)
+    params.require(:spending).permit(:account_id, :start_time, :shopping_category_id, :amount, :content).merge(user_id: current_user.id)
   end
 
 end
