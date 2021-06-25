@@ -13,7 +13,9 @@
         <div class="day-spending">
           <% spendings.each do |spending| %>
             <div class= "shopping-category">
+              <%= link_to('#', class: 'shopping-category') do %>
               <span><%= spending.shopping_category.name %>：</span><span><%= spending.amount %>円</span>
+              <% end %>
             </div>
           <% end %>
         </div>  
