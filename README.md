@@ -2,7 +2,7 @@
 
 | Column   | Type       | Options                |
 | -------- | ---------- | ---------------------- |
-| nickname   | string     | null: false            |
+| nickname | string     | null: false            |
 | email    | string     | null: false            |
 | password | string     | null: false            |
 
@@ -14,6 +14,8 @@ has_many houseworks
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
+| account           | integer    | null: false                    |
+| start_time        | datetime   | null: false                    |
 | shopping_category | integer    | null: false                    |
 | amount            | integer    | null: false                    |
 | user_id           | references | null: false, foreign_key: true |

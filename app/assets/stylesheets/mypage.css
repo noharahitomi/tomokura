@@ -30,3 +30,16 @@ ul.btn_new{
   align-items: center;
   list-style: none;
 }
+
+.shopping-category{
+  width: 10vw;
+  text-align: center;
+  background-color: #caff99;
+  padding: 5px 5px;
+  margin-bottom: 3px;
+  border-radius: 15px;
+}
+
+.shopping-category span{
+  font-size: 15px;
+}
