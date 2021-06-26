@@ -14,7 +14,10 @@ class SpendingsController < ApplicationController
     else
       render :new
     end
+  end
 
+  def show 
+  
   end
 
 
