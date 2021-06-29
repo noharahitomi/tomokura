@@ -25,16 +25,17 @@ class SpendingsController < ApplicationController
   end
 
   def update
-    spending = Spending.find(params[:id])
-    if spending.update(spending_parameter)
+    @spending = Spending.find(params[:id])
+    if @spending.update(spending_parameter)
       redirect_to spending_path
     else
       render :edit
+      @spending = Spending.find(params[:id])
     end
   end
 
   def destroy
-
+    
   end
 
   private
