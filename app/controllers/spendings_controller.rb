@@ -11,8 +11,8 @@ class SpendingsController < ApplicationController
   end
 
   def create
-    spending = Spending.new(spending_parameter)
-    if spending.save
+    @spending = Spending.new(spending_parameter)
+    if @spending.save
       redirect_to root_path
     else
       render :new

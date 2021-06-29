@@ -2,35 +2,37 @@
   <%= render partial:'layouts/header' %>
 </header>
 <main class="form-spending">
-  <%= form_with model: @spending, url: spendings_path, local: true do |form| %>
+  <%= form_with model: @spending, url: spendings_path, local: true do |f| %>
+    
+    <%= render 'layouts/error_messages', model: f.object %>
+
+    <div class="form">
+      <span><%= f.label "お支払い" %>
+      <br><%= f.collection_select(:account_id, Account.all, :id, :name, {}, {class:"account-select"}) %></span>
+    </div>
+
+    <div class="form">
+      <span><%= f.label "日付" %>
+      <br><%= f.date_select :start_time, {}, class: "date" %></span>
+    </div>
+
+    <div class="form">
+      <span><%= f.label "カテゴリーを選択" %>
+      <br><%= f.collection_select(:shopping_category_id, ShoppingCategory.all, :id, :name, {}, {class:"shopping-category-select"}) %></span>
+    </div>
     
     <div class="form">
-      <span><%= form.label "お支払い" %>
-      <br><%= form.collection_select(:account_id, Account.all, :id, :name, {}, {class:"account-select"}) %></span>
+      <span><%= f.label "金額" %>
+      <br><%= f.text_field :amount, class: "amount" %>円</span>
     </div>
 
     <div class="form">
-      <span><%= form.label "日付" %>
-      <br><%= form.date_select :start_time, {}, class: "date" %></span>
-    </div>
-
-    <div class="form">
-      <span><%= form.label "カテゴリーを選択" %>
-      <br><%= form.collection_select(:shopping_category_id, ShoppingCategory.all, :id, :name, {}, {class:"shopping-category-select"}) %></span>
-    </div>
-    
-    <div class="form">
-      <span><%= form.label "金額" %>
-      <br><%= form.text_field :amount, class: "amount" %>円</span>
-    </div>
-
-    <div class="form">
-      <span><%= form.label "備考欄" %>
-      <br><%= form.text_area :content, class: "content" %></span>
+      <span><%= f.label "備考欄" %>
+      <br><%= f.text_area :content, class: "content" %></span>
     </div>
 
     <div class="form-btn">
-      <%= form.submit "登録", class: "btn" %>
+      <%= f.submit "登録", class: "btn" %>
     </div>
   <% end %>
 </main>
