@@ -13,7 +13,7 @@
         <div class="day-spending">
           <% spendings.each do |spending| %>
             <div class= "shopping-category">
-              <%= link_to(spendings_path, class: 'shopping-category') do %>
+              <%= link_to(spending_path(spending.id), method: :get, class: 'shopping-category') do %>
               <span><%= spending.shopping_category.name %>：</span><span><%= spending.amount %>円</span>
               <% end %>
             </div>
@@ -23,12 +23,13 @@
   </div>
   <div class="btn_new">
     <ul class="btn_new">
-      <li class="btn_list"><%= link_to "支出を登録", new_spendings_path, class: "btn_spendings" %></li>
+      <li class="btn_list"><%= link_to "支出を登録", new_spending_path, class: "btn_spendings" %></li>
       <li class="btn_list"><%= link_to "家事ポイントを登録", "#", class: "btn_point"%></li>
       <li class="btn_list"><%= link_to "ありがとう", "#", class: "btn_thanks" %></li>
     </ul>
   </div>
 
   <div class="percentage">
+  
   </div>
 </div>

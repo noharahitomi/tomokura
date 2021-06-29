@@ -1,11 +1,15 @@
 .simple-calendar {
+  color: #494949;
+
   .day {
     color: rgb(53, 38, 38);
     background-color: #fff;
+    color: #494949;
   }
 
   .wday-0 {
     background-color: rgb(247, 223, 214);
+    color: #494949;
   }
   .wday-1 {
 
@@ -41,10 +45,10 @@
   }
 
   .prev-month {
-
+    color: #494949;
   }
   .next-month {
-    
+    color: #494949;
    }
   .current-month {
 
@@ -57,6 +61,7 @@
   table{
     margin-top: 20px;
     height: 700px;
+    color: #494949;
   }
 
   span{
@@ -64,6 +69,7 @@
   }
   .days{
     text-align: end;
+    color: #494949;
   }
   .week-day{
     text-align: center;
@@ -73,10 +79,11 @@
     border-collapse: collapse;
     border: solid 2px #ff5757;
     background-color: #ff5757;
+
   }
 
   table th, table td {
     border: dashed 1px #ff5757;
-
+    
   }
 }

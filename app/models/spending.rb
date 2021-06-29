@@ -5,5 +5,7 @@ class Spending < ApplicationRecord
   validates :amount, presence: true
   validates :start_time, presence: true
   validates :shopping_category_id, :account_id, numericality: { other_than: 1 }
+  
+
 
 end

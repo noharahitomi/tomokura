@@ -10,6 +10,20 @@
   <header>
     <%= render partial:'layouts/header' %>
   </header>
-  あいうえお
+  <main>
+  <div class="spenbing">
+    <ul class="spending-data">
+      <li>支出　　　　：　<%= @spending.amount %> 円</li>
+      <li>カテゴリー　：　<%= @spending.shopping_category.name %></li>
+      <li>備考欄　　　：　<%= @spending.content %></li>
+    </ul>
+  <div>
+  <div>
+    <ul class="btn-edit-delete">
+      <li><%= link_to "編集する", edit_spending_path, class:"btn-edit" %></li>
+      <li><%= link_to "削除する", "#", method: :delete, class:"btn-delete" %></li>
+    </ul>
+  </div>
+  </main>
 </body>
 </html>
