@@ -35,7 +35,12 @@ class SpendingsController < ApplicationController
   end
 
   def destroy
-    
+    @spending = Spending.find(params[:id])
+    if @spending.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   private
