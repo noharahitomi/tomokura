@@ -1,6 +1,9 @@
 class SpendingsController < ApplicationController
   def index
     @spendings = Spending.all
+    
+    # @month_total = Spending.group("YEAR(start_time)").group("MONTH(start_time)").sum(:amount)
+
   end
 
   def new
@@ -8,8 +11,8 @@ class SpendingsController < ApplicationController
   end
 
   def create
-    spending = Spending.new(spending_parameter)
-    if spending.update
+    @spending = Spending.new(spending_parameter)
+    if @spending.save
       redirect_to root_path
     else
       render :new
@@ -35,7 +38,12 @@ class SpendingsController < ApplicationController
   end
 
   def destroy
-    
+    @spending = Spending.find(params[:id])
+    if @spending.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
   end
 
   private
