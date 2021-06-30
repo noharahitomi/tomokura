@@ -13,3 +13,7 @@ ja:
         crypted_password: パスワード
         created_at: 作成日
         updated_at: 更新日
+      spending:
+        amount: 支払い金額
+        account_id: お支払い
+        shopping_category_id: 支出のカテゴリー
