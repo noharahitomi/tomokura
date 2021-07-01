@@ -1,6 +1,6 @@
 class Spending < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :shopping_category, :account
+  belongs_to :shopping_category, :account, :user
 
   with_options presence: true do
     validates :amount, :start_time

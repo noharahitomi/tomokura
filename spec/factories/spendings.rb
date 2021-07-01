@@ -5,6 +5,6 @@ FactoryBot.define do
     shopping_category_id   {3}
     amount                 {'1000'}
     content                {'晩ご飯'}
-    association :user
+    association :user 
   end
 end
