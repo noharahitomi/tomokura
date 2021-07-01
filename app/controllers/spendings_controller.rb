@@ -1,4 +1,7 @@
 class SpendingsController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
+  before_action :set_spending, only: [:show, :edit, :update, :destroy]
+
   def index
     @spendings = Spending.all
     
@@ -20,15 +23,14 @@ class SpendingsController < ApplicationController
   end
 
   def show 
-    @spending = Spending.find(params[:id])
+    
   end
 
   def edit 
-    @spending = Spending.find(params[:id])
+    
   end
 
   def update
-    @spending = Spending.find(params[:id])
     if @spending.update(spending_parameter)
       redirect_to spending_path
     else
@@ -38,7 +40,6 @@ class SpendingsController < ApplicationController
   end
 
   def destroy
-    @spending = Spending.find(params[:id])
     if @spending.destroy
       redirect_to root_path
     else
@@ -50,6 +51,10 @@ class SpendingsController < ApplicationController
 
   def spending_parameter
     params.require(:spending).permit(:account_id, :start_time, :shopping_category_id, :amount, :content).merge(user_id: current_user.id)
+  end
+
+  def set_spending
+    @spending = Spending.find(params[:id])
   end
 
 end
