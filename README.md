@@ -19,8 +19,8 @@ https://hitokura-app.herokuapp.com/
 （参考：https://www.instagram.com/p/CEGGNCDJM5C/?utm_source=ig_web_copy_link）
 
 ## DEMO
-![トップページ](https://gyazo.com/95d8165c59edb979ae6bf7938878dd34/raw)
-![マイページ](https://gyazo.com/ef2fa1ff1c7f42da98d989d456975b55/raw)
+![トップページ](https://gyazo.com/95d8165c59edb979ae6bf7938878dd34.gif)
+![マイページ](https://gyazo.com/ef2fa1ff1c7f42da98d989d456975b55.gif)
 
 
 ## DB設計
