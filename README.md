@@ -18,6 +18,13 @@ https://hitokura-app.herokuapp.com/
 また、家事をした方は、相手からの感謝の気持ちを受け取るだけで、気持ちが軽くなるため、ありがとうを送ることができる機能を付けようと考えました。
 （参考：https://www.instagram.com/p/CEGGNCDJM5C/?utm_source=ig_web_copy_link）
 
+## 実装予定の内容
+・支出を登録する機能
+・家事登録・編集・削除機能
+・家事に対してのありがとう登録機能
+・月の合計支出金額、家事ポイント、ありがとうポイントを表示する機能
+・月のカテゴリーごとの支出の比率を表示する機能
+
 ## DEMO
 ![トップページ](https://gyazo.com/95d8165c59edb979ae6bf7938878dd34.gif)
 ![マイページ](https://gyazo.com/ef2fa1ff1c7f42da98d989d456975b55.gif)
