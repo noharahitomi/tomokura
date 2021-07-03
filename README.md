@@ -24,7 +24,9 @@ https://hitokura-app.herokuapp.com/
 ・月のカテゴリーごとの支出の比率を表示する機能
 
 ## DEMO
+### トップページ
 ![トップページ](https://gyazo.com/95d8165c59edb979ae6bf7938878dd34.gif)
+### マイページ
 ![マイページ](https://gyazo.com/ef2fa1ff1c7f42da98d989d456975b55.gif)
 
 
