@@ -138,10 +138,12 @@ img.calender_prev{
 
 img.graph{
   height: 300px;
+  opacity: 0.3;
 }
 
 img.function_thank_you{
   height: 300px;
+  opacity: 0.3;
 }
 
 .functions{
@@ -155,7 +157,27 @@ img.function_thank_you{
   border-radius: 20px;
   padding: 20px;
   text-align: center;
+  position: relative;
 }
+
+.function p{
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  font-size: 40px;
+  transform: rotate(-10deg);
+  font-weight: bold;
+}
+
+.graph-content{
+  color: #bbbbbb;
+}
+
+.thank-you-content{
+  color: #bbbbbb;
+}
+
+
 
 footer{
   position: fixed;
