@@ -19,12 +19,13 @@ https://hitokura-app.herokuapp.com/
 （参考：https://www.instagram.com/p/CEGGNCDJM5C/?utm_source=ig_web_copy_link）
 
 ## DEMO
-![トップページ](https://gyazo.com/95d8165c59edb979ae6bf7938878dd34)
-![マイページ](https://gyazo.com/ef2fa1ff1c7f42da98d989d456975b55)
+![トップページ](./images/mypage_mv.mp4)
+![マイページ](./images/toppage_mv.mp4)
 
 
+## DB設計
 
-## usersテーブル
+### usersテーブル
 
 | Column   | Type       | Options                |
 | -------- | ---------- | ---------------------- |
@@ -32,11 +33,11 @@ https://hitokura-app.herokuapp.com/
 | email    | string     | null: false            |
 | password | string     | null: false            |
 
-### association
+#### association
 has_many spendings
 has_many houseworks
 
-## spending テーブル
+### spending テーブル
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
@@ -46,10 +47,10 @@ has_many houseworks
 | amount            | integer    | null: false                    |
 | user_id           | references | null: false, foreign_key: true |
 
-### association
+#### association
 belongs_to user
 
-## housework
+### housework
 
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
@@ -57,5 +58,5 @@ belongs_to user
 | point             | integer    | null: false                    |
 | user_id           | references | null: false, foreign_key: true |
 
-### association
+#### association
 belongs_to user
