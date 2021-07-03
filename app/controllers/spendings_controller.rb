@@ -3,8 +3,8 @@ class SpendingsController < ApplicationController
   before_action :set_spending, only: [:show, :edit, :update, :destroy]
 
   def index
-    @spendings = Spending.all
     
+
     # @month_total = Spending.group("YEAR(start_time)").group("MONTH(start_time)").sum(:amount)
 
   end
@@ -16,7 +16,7 @@ class SpendingsController < ApplicationController
   def create
     @spending = Spending.new(spending_parameter)
     if @spending.save
-      redirect_to root_path
+      redirect_to user_path(id: current_user)
     else
       render :new
     end
@@ -35,13 +35,12 @@ class SpendingsController < ApplicationController
       redirect_to spending_path
     else
       render :edit
-      @spending = Spending.find(params[:id])
     end
   end
 
   def destroy
     if @spending.destroy
-      redirect_to root_path
+      redirect_to user_path(id: current_user)
     else
       render :show
     end

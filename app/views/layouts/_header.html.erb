@@ -1,12 +1,18 @@
 <div class="header">
       <div class="title_img">
-        <%= link_to root_path, class:"title_imag" do %>
-          <%= image_tag 'title.png', class:'title' %>
+        <% if user_signed_in? %>
+          <%= link_to user_path(id: current_user), class:"title_imag" do %>
+            <%= image_tag 'title.png', class:'title' %>
+          <% end %>
+        <% else %>
+          <%= link_to root_path, class:"title_imag" do %>
+            <%= image_tag 'title.png', class:'title' %>
+          <% end %>
         <% end %>
       </div>
       <ul class="header_sign_up">
         <% if user_signed_in? %>
-          <li><%= link_to "#{current_user.nickname} さん", root_path, class: "user_nickname" %>
+          <li><%= link_to "#{current_user.nickname} さん", user_path(id: current_user), class: "user_nickname" %>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
         <% else %>
           <li><%= link_to '新規登録', new_user_registration_path, class:"sign_up" %></li>
