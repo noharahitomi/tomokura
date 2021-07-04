@@ -28,11 +28,7 @@ class SpendingsController < ApplicationController
   end
 
   def edit 
-    if @spending.user_id == current_user.id
-      render :index
-    else
-      redirect_to user_path(id: current_user)
-    end
+
   end
 
   def update
