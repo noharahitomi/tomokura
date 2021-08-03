@@ -1,0 +1,25 @@
+<main class="form-spending">
+  <%= form_with model: @housework, url: houseworks_path, local: true do |f| %>
+    
+    <%= render 'layouts/error_messages', model: f.object %>
+
+    <div class="form">
+      <span><%= f.label "日付" %>
+      <br><%= f.date_select :start_time, {}, class: "date" %></span>
+    </div>
+
+    <div class="form">
+      <span><%= f.label "カテゴリーを選択" %>
+      <br><%= f.collection_select(:work_category_id, WorkCategory.all, :id, :name, {}, {class:"work-category-select"}) %></span>
+    </div>
+    
+    <div class="form">
+      <span><%= f.label "家事ポイント" %>
+      <br><%= f.text_field :points, class: "points" %>　pt</span>
+    </div>
+
+    <div class="form-btn">
+      <%= f.submit "登録", class: "btn" %>
+    </div>
+  <% end %>
+</main>
