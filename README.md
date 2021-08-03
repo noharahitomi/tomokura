@@ -62,7 +62,7 @@ belongs_to user
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
 | work_category     | integer    | null: false                    |
-| point             | integer    | null: false                    |
+| points             | integer    | null: false                    |
 | user_id           | references | null: false, foreign_key: true |
 
 #### association
